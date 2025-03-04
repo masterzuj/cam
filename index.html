@@ -76,12 +76,22 @@
                     mediaRecorder.start();
                     startBtn.disabled = true;
                     stopBtn.disabled = false;
+
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth' // Optional: für sanftes Scrollen
+                    });
                 };
 
                 stopBtn.onclick = () => {
                     mediaRecorder.stop();
                     startBtn.disabled = false;
                     stopBtn.disabled = true;
+
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth' // Optional: für sanftes Scrollen
+                    });
                 };
             })
             .catch(error => {
